@@ -1,0 +1,72 @@
+section{
+  padding: 10px;
+}
+.heads .name{
+  font-size: 2em;
+}
+.heads .release{
+  margin: 20px 0;
+}
+
+.box{
+  max-width: 400px;
+  width: 90%;
+  padding: 10px;
+  background: #222;
+  color: #fff;
+  border-radius: 6px;
+}
+.box img{
+  width: 100%;
+  aspect-ratio: 16/9;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: .0em;
+  border: 1px dashed #fff;
+}
+.box .f{
+  font-size: .9em;
+}
+.box .f .field{
+  margin: 5px 0;
+}
+.box a{
+  color: #fff;
+}
+.box .about{
+  margin: 10px 0;
+}
+.box .src{
+  text-align: right;
+}
+.trailer{
+  width: 400px;
+  max-width: 90%;
+  text-align: center;
+  background: #999;
+  border-radius: 5px;
+  padding: 5px;
+  color: #fff;
+}
+.trailer iframe{
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 5px;
+}
+.seo .tag{
+  margin: 40px 0;
+  background: #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  flex-flow: row wrap;
+}
+.seo .tag a{
+  padding: 5px;
+  background: #fff;
+  margin: 5px;
+  display: inline-block;
+  border-radius: 3px;
+  color: #111;
+  text-decoration: none;
+}

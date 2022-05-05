@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@300&display=swap');
+*{
+  font-family: 'Mali', cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.c{
+  flex-flow: column;
+}
+.texCen{
+  text-align: center;
+}
+.w100p{
+  width: 100%;
+}
+.border{
+  /*background: #999;*/
+  height: 1px;
+}
