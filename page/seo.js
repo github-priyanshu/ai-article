@@ -1,6 +1,6 @@
 
 function makeTags(){
-  var pages=["Bhool Bhulaiyaa 2",'Prithviraj',"Brahmastra"],html="";
+  var pages=["Bhool Bhulaiyaa 2",'Prithviraj',"Brahmastra","Cirkus"],html="";
 
   var html="";
   
