@@ -57,7 +57,7 @@ function makeLinkUi(){
     <h2 id="gdTxt">Please wait. Creating link...</h2>
     <button id="redBtn" style=
     'padding: 10px;background: #008400;border-radius: 5px;border: 1px solid #0a0;color: #fff;font-size: 1.1em;'
-    onclick="window.open('${downloadData.src}')"
+    onclick="location.assign('${downloadData.src}')"
     disabled>Please Wait</button>
   </div>`;
   op(".eng").insertAdjacentHTML("afterend",html);
