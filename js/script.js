@@ -66,3 +66,22 @@ function getAgo(time){
   }
   return [Math.floor(diff/pri[s]),s];
 }
+
+/*REDIRECT*/
+var redirect=location.search,heads=op(".heads");
+
+if(redirect){
+  redirect=redirect.replace('?redirect=','');
+  redirect=JSON.parse(JSON.parse(decodeURI(redirect)));
+
+  changeRedirectUI();
+}
+
+function changeRedirectUI(){
+  for(let i=0; i<2; i++){
+    heads.nextElementSibling.remove();
+  }
+  heads.style.display='none';
+}
+
+log(redirect)
