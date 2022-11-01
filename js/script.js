@@ -71,7 +71,7 @@ function getAgo(time){
 var redirect=location.search,heads=op(".heads");
 
 if(redirect){
-  redirect=redirect.replace('?redirect=','');
+  redirect=redirect.replace('?redirect=','').replaceAll("%3D",'=');
   redirect=atob(redirect);
   redirect=JSON.parse(decodeURI(redirect));
 
