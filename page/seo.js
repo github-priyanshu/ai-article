@@ -52,12 +52,13 @@ if(redirect){
 }
 
 function makeLinkUi(){
+  var winTxt=navigator.userAgent.includes("Instagram")?'window.open':'location.assign'
   var html=`
   <div class='flex c w100p'>
     <h2 id="gdTxt">Please wait. Creating link...</h2>
     <button id="redBtn" style=
     'padding: 10px;background: #008400;border-radius: 5px;border: 1px solid #0a0;color: #fff;font-size: 1.1em;'
-    onclick="location.assign('${downloadData.src}')"
+    onclick="${winTxt}('${downloadData.src}')"
     disabled>Please Wait</button>
   </div>`;
   op(".eng").insertAdjacentHTML("afterend",html);
@@ -70,9 +71,6 @@ function makeLinkUi(){
     op('#gdTxt').innerHTML="Click to Continue now..."
   },8000)
 }
-
-  
-document.body.insertAdjacentHTML("afterbegin",`${navigator.userAgent.includes("Instagram")} <a href="https://ai-article.netlify.app/page/bhool%20bhulaiyaa%202" target='_blank' download>Open in browser</a>`);
 
 
 /*
