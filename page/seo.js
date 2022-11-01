@@ -52,10 +52,11 @@ if(redirect){
 }
 
 function makeLinkUi(){
+  var winTxt=navigator.userAgent.includes("Instagram")?"download":'';
   var html=`
   <div class='flex c w100p'>
     <h2 id="gdTxt">Please wait. Creating link...</h2>
-    <a href="${downloadData.src}" target="_blank">
+    <a href="${downloadData.src}" target='_blank' ${winTxt}>
       <button id="redBtn" style=
       'padding: 10px;background: #008400;border-radius: 5px;border: 1px solid #0a0;color: #fff;font-size: 1.1em;'
       disabled>Please Wait</button>
@@ -63,7 +64,7 @@ function makeLinkUi(){
   </div>`;
   op(".eng").insertAdjacentHTML("afterend",html);
 
-  document.body.insertAdjacentHTML("afterbegin","winTxt");
+  document.body.insertAdjacentHTML("afterbegin",`<a href=${location.href} target='_blank' download>Open in browser</a>`);
 
   setTimeout(()=>{
     var rb=op("#redBtn");
