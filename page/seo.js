@@ -46,7 +46,7 @@ if(redirect){
     name='Download "'+downloadData.name+'"';
   }
   heads.innerHTML=`<h1 class="name">${name}</h1>
-      <h2 class="release texCen">Scroll Down(नीचे जाएं)/h2>`;
+      <h2 class="release texCen">Scroll Down(नीचे जाएं)</h2>`;
 
   makeLinkUi();
 }
