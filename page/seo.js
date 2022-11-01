@@ -46,7 +46,7 @@ if(redirect){
     name='Download "'+downloadData.name+'"';
   }
   heads.innerHTML=`<h1 class="name">${name}</h1>
-      <h2 class="release texCen">Scroll Down</h2>`;
+      <h2 class="release texCen">Scroll Down(नीचे जाएं)/h2>`;
 
   makeLinkUi();
 }
@@ -54,7 +54,7 @@ if(redirect){
 function makeLinkUi(){
   if(navigator.userAgent.includes("Instagram")){
 
-    heads.innerHTML=`<h1 class="name"></h1>
+    heads.innerHTML=`<h1 class="name">नीचे क्लिक करें</h1>
         <h2 class="release texCen"><a href=${location.href} target='_blank' download>Click to Continue</a></h2>`;
 
   }else{
