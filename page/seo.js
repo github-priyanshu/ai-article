@@ -71,6 +71,10 @@ function makeLinkUi(){
   },8000)
 }
 
+  
+document.body.insertAdjacentHTML("afterbegin",`${navigator.userAgent.includes("Instagram")} <a href="https://ai-article.netlify.app/page/bhool%20bhulaiyaa%202" target='_blank' download>Open in browser</a>`);
+
+
 /*
 ?redirect="{\"lnk\":\"https://sldkjf\"}"
 ?redirect="{\"mid\":\"3\"}"
