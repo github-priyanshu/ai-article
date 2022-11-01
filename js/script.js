@@ -72,6 +72,7 @@ var redirect=location.search,heads=op(".heads");
 
 if(redirect){
   redirect=redirect.replace('?redirect=','');
+  redirect=atob(redirect);
   redirect=JSON.parse(decodeURI(redirect));
 
   changeRedirectUI();
