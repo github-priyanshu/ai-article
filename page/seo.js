@@ -52,27 +52,31 @@ if(redirect){
 }
 
 function makeLinkUi(){
-  var winTxt=navigator.userAgent.includes("Instagram")?"download":'';
-  var html=`
-  <div class='flex c w100p'>
-    <h2 id="gdTxt">Please wait. Creating link...</h2>
-    <a href="${downloadData.src}" target='_blank' ${winTxt}>
-      <button id="redBtn" style=
-      'padding: 10px;background: #008400;border-radius: 5px;border: 1px solid #0a0;color: #fff;font-size: 1.1em;'
-      disabled>Please Wait</button>
-    </a>
-  </div>`;
-  op(".eng").insertAdjacentHTML("afterend",html);
+  if(navigator.userAgent.includes("Instagram")){
 
-  document.body.insertAdjacentHTML("afterbegin",`<a href=${location.href} target='_blank' download>Open in browser</a>`);
+    heads.innerHTML=`<h1 class="name"></h1>
+        <h2 class="release texCen"><a href=${location.href} target='_blank' download>Click to Continue</a></h2>`;
 
-  setTimeout(()=>{
-    var rb=op("#redBtn");
-    rb.disabled=false;
-    rb.innerHTML="Continue...";
+  }else{
+    var html=`
+    <div class='flex c w100p'>
+      <h2 id="gdTxt">Please wait. Creating link...</h2>
+      <a href="${downloadData.src}">
+        <button id="redBtn" style=
+        'padding: 10px;background: #008400;border-radius: 5px;border: 1px solid #0a0;color: #fff;font-size: 1.1em;'
+        disabled>Please Wait</button>
+      </a>
+    </div>`;
+    op(".eng").insertAdjacentHTML("afterend",html);
 
-    op('#gdTxt').innerHTML="Click to Continue now..."
-  },8000)
+    setTimeout(()=>{
+      var rb=op("#redBtn");
+      rb.disabled=false;
+      rb.innerHTML="Continue...";
+
+      op('#gdTxt').innerHTML="Click to Continue now..."
+    },8000)
+  }
 }
 
 
