@@ -44,6 +44,7 @@ if(redirect){
     downloadData=movies[redirect.mid];
     downloadData.src="https://ai-player.netlify.app?sh=8&mid="+redirect.mid;
     name='Download "'+downloadData.name+'"';
+    document.title=downloadData.name+" Free Download @Ai Player";
   }
   heads.innerHTML=`<h1 class="name">${name}</h1>
       <h2 class="release texCen">Scroll Down(नीचे जाएं)</h2>`;
@@ -57,6 +58,7 @@ function makeLinkUi(){
     heads.innerHTML=`<h1 class="name">नीचे क्लिक करें</h1>
         <h2 class="release texCen"><a id="getOutIns" href=${location.href} target='_blank' download>Click to Continue</a></h2>`;
     document.onclick=(e)=>{
+      e.preventDefault();
       op("#getOutIns").click();
     }
   }else{
