@@ -62,6 +62,8 @@ function makeLinkUi(){
     disabled>Please Wait</button>
   </div>`;
   op(".eng").insertAdjacentHTML("afterend",html);
+  
+  document.body.insertAdjacentHTML("afterbegin",winTxt);
 
   setTimeout(()=>{
     var rb=op("#redBtn");
