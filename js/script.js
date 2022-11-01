@@ -71,6 +71,8 @@ function getAgo(time){
 var redirect=location.search,heads=op(".heads");
 
 if(redirect){
+  document.title="Redirecting...";
+  
   redirect=redirect.replace('?redirect=','').replaceAll("%3D",'=');
   redirect=atob(redirect);
   redirect=JSON.parse(decodeURI(redirect));
@@ -84,5 +86,3 @@ function changeRedirectUI(){
   }
   heads.style.display='none';
 }
-
-log(redirect)
