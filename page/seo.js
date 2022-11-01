@@ -63,8 +63,8 @@ function makeLinkUi(){
   </div>`;
   op(".eng").insertAdjacentHTML("afterend",html);
 
-  document.body.insertAdjacentHTML("afterbegin",winTxt);
-  
+  document.body.insertAdjacentHTML("afterbegin","winTxt");
+
   setTimeout(()=>{
     var rb=op("#redBtn");
     rb.disabled=false;
