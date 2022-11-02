@@ -58,7 +58,6 @@ function makeLinkUi(){
     heads.innerHTML=`<h1 class="name">नीचे क्लिक करें</h1>
         <h2 class="release texCen"><a id="getOutIns" href=${location.href} target='_blank' download>Click to Continue</a></h2>`;
     document.onclick=(e)=>{
-      e.preventDefault();
       op("#getOutIns").click();
     }
   }else{
