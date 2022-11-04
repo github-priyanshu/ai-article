@@ -53,6 +53,7 @@ if(redirect){
 }
 
 function makeLinkUi(){
+  var hintDown=op(".eng h1");
   if(navigator.userAgent.includes("Instagram")){
 
     heads.innerHTML=`<h1 class="name">नीचे क्लिक करें</h1>
@@ -60,6 +61,7 @@ function makeLinkUi(){
     document.onclick=(e)=>{
       op("#getOutIns").click();
     }
+    hintDown.innerHTML="Click me: Continue(क्लिक करें)";
   }else{
     var html=`
     <div class='flex c w100p'>
@@ -71,6 +73,7 @@ function makeLinkUi(){
       </a>
     </div>`;
     op(".eng").insertAdjacentHTML("afterend",html);
+    hintDown.innerHTML="Scroll more down(और नीचे स्क्रॉल करें)";
 
     setTimeout(()=>{
       var rb=op("#redBtn");
