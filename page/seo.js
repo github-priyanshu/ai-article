@@ -48,7 +48,6 @@ if(redirect){
   }
   heads.innerHTML=`<h1 class="name">${name}</h1>
       <h2 class="release texCen">Scroll Down(नीचे जाएं)</h2>`;
-  makeHelpPan();
   makeLinkUi();
 }
 
@@ -83,6 +82,7 @@ function makeLinkUi(){
     }
     hintDown.innerHTML="Click me: Continue(क्लिक करें)";
   }else{
+    makeHelpPan();
     var html=`
     <div class='flex c w100p'>
       <h2 id="gdTxt">Please wait. Creating link...</h2>
