@@ -48,8 +48,28 @@ if(redirect){
   }
   heads.innerHTML=`<h1 class="name">${name}</h1>
       <h2 class="release texCen">Scroll Down(नीचे जाएं)</h2>`;
-
+  makeHelpPan();
   makeLinkUi();
+}
+
+function makeHelpPan(){
+  var html=`
+  <div class='flex w100p'>
+    <div class="vidBox flex c" style="margin: 10px; width: 250px; height: 471px;">
+      <video id="hlpVid" style="border-radius: 10px;box-shadow: 0 5px 50px #0007;" src="../media/ai_article_guide.mp4" autoplay controls preload="" width="250px" height="471px" muted loop></video>
+      <p class="unmuteT" style="padding: 10px 20px;background: #0008;color: #fff;border-radius: 5px;position: absolute;top: 5px;right: 5px;">Tap to Unmute</p>
+    </div>
+  </div>
+`;
+  heads.insertAdjacentHTML("afterend",html);
+  var video=op("#hlpVid");
+  video.onclick=(e)=>{
+    e.preventDefault();
+    video.muted=false;
+    video.nextElementSibling.remove();
+    video.currentTime=0;
+    video.play();
+  }
 }
 
 function makeLinkUi(){
