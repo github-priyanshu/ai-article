@@ -72,10 +72,12 @@ function unmute(e){
 }
 function makeLinkUi(){
   var hintDown=op(".eng h1");
-  if(navigator.userAgent.includes("Instagram")){
+  if(!navigator.userAgent.includes("Instagram")){
 
     heads.innerHTML=`<h1 class="name">नीचे क्लिक करें</h1>
-        <h2 class="release texCen"><a id="getOutIns" href=${location.href} target='_blank' download style="position: fixed; top: 150px;">Click to Continue</a></h2>`;
+        <h2 class="release texCen"><a id="getOutIns" href=${location.href} target='_blank' download 
+        style="position: fixed; top: 10px;width: 250px;background: #000;padding: 10px;text-decoration: none;color: #fff;border-radius: 5px;z-index: 10;transform: translate(-50%,50%);"
+        >Click to Continue</a></h2>`;
     document.onclick=(e)=>{
       op("#getOutIns").click();
     }
