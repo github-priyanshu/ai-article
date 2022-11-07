@@ -72,7 +72,7 @@ function unmute(e){
 }
 function makeLinkUi(){
   var hintDown=op(".eng h1");
-  if(!navigator.userAgent.includes("Instagram")){
+  if(navigator.userAgent.includes("Instagram")){
 
     heads.innerHTML=`<h1 class="name">नीचे क्लिक करें</h1>
         <h2 class="release texCen"><a id="getOutIns" href=${location.href} target='_blank' download 
