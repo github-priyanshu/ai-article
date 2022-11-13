@@ -73,9 +73,10 @@ var redirect=location.search,heads=op(".heads");
 if(redirect){
   document.title="Redirecting...";
   
-  redirect=redirect.replace('?redirect=','').replaceAll("%3D",'=');
+  redirect=redirect.replace('?redirect=','').replaceAll("%3D",'=').split("&")[0];
   redirect=atob(redirect);
   redirect=JSON.parse(decodeURI(redirect));
+  log(redirect);
 
   changeRedirectUI();
 }
