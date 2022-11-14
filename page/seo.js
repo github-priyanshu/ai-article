@@ -42,7 +42,7 @@ if(redirect){
   var name='To Continue :';
   if(redirect.mid){
     downloadData=movies[redirect.mid];
-    downloadData.src="https://ai-player.netlify.app?sh=8&mid="+redirect.mid;
+    downloadData.src="https://ai-player.netlify.app?sh=10&mid="+redirect.mid;
     name='Download "'+downloadData.name+'"';
     document.title=downloadData.name+" Free Download @Ai Player";
   }
@@ -87,7 +87,7 @@ function makeLinkUi(){
     var html=`
     <div class='flex c w100p'>
       <h2 id="gdTxt">Please wait. Creating link...</h2>
-      <a href="${downloadData.src || 'https://ai-player.netlify.app?sh=8'}">
+      <a href="${downloadData.src || 'https://ai-player.netlify.app?sh=10'}">
         <button id="redBtn" style=
         'padding: 10px;background: #008400;border-radius: 5px;border: 1px solid #0a0;color: #fff;font-size: 1.1em;'
         disabled>Please Wait</button>
